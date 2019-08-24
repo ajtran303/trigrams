@@ -11,7 +11,7 @@ const trigrams = [
 
 const randomTrigram = trigrams[Math.floor(Math.random()*trigrams.length)];
 
-document.getElementById("name").innerHTML = randomTrigram.name;
+document.getElementById("name").innerHTML = randomTrigram.name + "!";
 
 const binaryArray = randomTrigram.binary.split("");
 
