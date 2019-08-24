@@ -1,1 +1,1 @@
-This project uses JS to render HTML elements.
+Generate one of eight trigrams.
