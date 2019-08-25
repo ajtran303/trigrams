@@ -13,11 +13,11 @@ const TRIGRAMS = [
 
 const RANDOMTRIGRAM = TRIGRAMS[Math.floor(Math.random()*TRIGRAMS.length)];
 
-const CONTAINER = document.getElementById("container");
+document.getElementById("name").innerHTML = `Your Trigram is: ${RANDOMTRIGRAM.name}!`;
 
 const BINARYARRAY = RANDOMTRIGRAM.binary.split("");
 
-document.getElementById("name").innerHTML = `Your Trigram is: ${RANDOMTRIGRAM.name}!`;
+const CONTAINER = document.getElementById("container");
 
 for (let n=0; n < BINARYARRAY.length; n++){
   const LINES = CONTAINER.appendChild(document.createElement("div"));
