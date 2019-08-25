@@ -1,4 +1,6 @@
-const trigrams = [
+"use strict";
+
+const TRIGRAMS = [
   {name : "Heaven", binary : "xxxxxxxxx"},
   {name : "Thunder", binary : "xoxxoxxxx"},
   {name : "Water", binary : "xoxxxxxox"},
@@ -9,15 +11,15 @@ const trigrams = [
   {name : "Lake", binary : "xoxxxxxxx"}
 ];
 
-const randomTrigram = trigrams[Math.floor(Math.random()*trigrams.length)];
+const RANDOMTRIGRAM = TRIGRAMS[Math.floor(Math.random()*TRIGRAMS.length)];
 
-document.getElementById("name").innerHTML = randomTrigram.name + "!";
+const CONTAINER = document.getElementById("container");
 
-const binaryArray = randomTrigram.binary.split("");
+const BINARYARRAY = RANDOMTRIGRAM.binary.split("");
 
-const container = document.getElementById("container");
+document.getElementById("name").innerHTML = `Your Trigram is: ${RANDOMTRIGRAM.name}!`;
 
-for (let n=0; n < binaryArray.length; n++){
-  let lines = container.appendChild(document.createElement("div"));
-  lines.classList.add(binaryArray[n]);
+for (let n=0; n < BINARYARRAY.length; n++){
+  const LINES = CONTAINER.appendChild(document.createElement("div"));
+  LINES.classList.add(BINARYARRAY[n]);
 };
